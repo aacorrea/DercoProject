@@ -10,6 +10,10 @@ app = Flask(__name__, template_folder="templates")
 def home():
     return render_template('home.html')  # Render home.html
 
+@app.route('/eda')
+def eda():
+    return render_template('eda.html')  # Render home.html
+
 
 # Route 'classify' accepts GET request
 @app.route('/classify', methods=['GET'])
@@ -35,4 +39,3 @@ def classify_type():
 # Run the Flask server
 if __name__ == '__main__':
     app.run(debug=True)
-
